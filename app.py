@@ -10,7 +10,8 @@ app = Flask(__name__)
 def hello():
     name = request.args.get("name", "mundo")
     # escape() evita XSS reflejado: el parámetro vuelve al navegador como texto
-    return f"Hello, {escape(name)}!"
+    #return f"Hello, {escape(name)}!"
+    return f"Hello, {name}!"
 
 
 @app.route("/health")
